@@ -1,0 +1,9 @@
+@Rule public JenkinsRule j = new JenkinsRule();
+
+@Test public void someTest() {
+  EnvironmentVariablesNodeProperty prop = new EnvironmentVariablesNodeProperty();
+  EnvVars env = prop.getEnvVars();
+  env.put("DEPLOY_TARGET", "staging");
+  j.jenkins.getGlobalNodeProperties().add(prop);
+  // …
+}
