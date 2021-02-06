@@ -1,10 +1,4 @@
-@Rule public JenkinsRule j = new JenkinsRule();
-
-@Test public void someTest() {
-  EnvironmentVariablesNodeProperty prop = new EnvironmentVariablesNodeProperty();
-  EnvVars env = prop.getEnvVars();
-  env.put("DEPLOY_TARGET", "staging");
-  j.jenkins.getGlobalNodeProperties().add(prop);
-  // …
-}
-
+echo $JAVA_HOME
+echo $JRE_HOME
+echo "build No"
+echo $BUILD_NUMBER
